@@ -1,14 +1,14 @@
 cask "shareclip" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.4"
-  sha256 arm:   "7efcab2a3b337c537955579e13e617df7235775e6d2bbd655cbb22b6a69f0e88",
-         intel: "c8b0fc64ebfdd000196a2fa3644c26fcb92e06c7055d99f604be7f3b2548997a"
+  version "4.5.9"
+  sha256 arm:   "92228d3e8d89ac941f1d7563b1b1eb254ae03d2bb2b376ed3fd35ee79f686b32",
+         intel: "fbc8ceef8014bbc535a4179a09c68e92d2cd8479acccf7622be4e11c2dc3076d"
 
   url "https://github.com/NovaMindLab/AIShare-Grabber/releases/download/v#{version}/ShareCLIP-Mac-#{version}-#{arch}.dmg",
       verified: "github.com/NovaMindLab/AIShare-Grabber/"
   name "ShareCLIP"
-  desc "Private P2P AirDrop Alternative, Local AI Photo Search & Media Manager"
+  desc "Local-first P2P file transfer and on-device AI photo gallery"
   homepage "https://novamindlab.github.io/AIShare-Grabber/"
 
   livecheck do
@@ -22,9 +22,9 @@ cask "shareclip" do
   app "ShareCLIP.app"
 
   zap trash: [
-    "~/Library/Application Support/shareclip",
-    "~/Library/Logs/shareclip",
+    "~/Library/Application Support/ShareCLIP",
     "~/Library/Preferences/com.shareclip.album.sync.plist",
     "~/Library/Saved Application State/com.shareclip.album.sync.savedState",
+    "~/Library/Logs/ShareCLIP",
   ]
 end
